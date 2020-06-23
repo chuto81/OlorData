@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="resulttitle">
-    <h3 style="padding-top: 3%; margin-top: -1.5%; margin-bottom: 4%; margin-left: 10%; margin-right: 10%;">EMPRESA S.A.S.</h3>
+    <h3 style="padding-top: 3%; margin-top: -1.5%; margin-bottom: 4%; margin-left: 10%; margin-right: 10%;">Equivida Salud Ocupacional</h3>
     <h1 style="margin-top: -7%; margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">Ha finalizado la Prueba de Anosmia</h1>
 </div>
 
@@ -29,7 +29,7 @@
         <div class="resultcol-75">
             <script>
                 var identificacion="{{ usuario[0] }}";
-                document.write(identificacion)
+                document.write(identificacion);
                 document.write('<br>');
             </script>
         </div>
@@ -37,13 +37,12 @@
 
     <div class="row userresult">
         <div class="resultcol-25">
-            <span>Temperatura Corporal:</span>
+            <span>Empresa:</span>
         </div>
         <div class="resultcol-75">
             <script>
-                var temp="{{ usuario[2] }}";
-                document.write(temp);
-                document.write(' °C');
+                var empresa="{{ usuario[2] }}";
+                document.write(empresa);
                 document.write('<br>');
             </script>
         </div>
