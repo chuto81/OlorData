@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="resulttitle">
+    <h3 style="padding-top: 3%; margin-top: -1.5%; margin-bottom: 4%; margin-left: 10%; margin-right: 10%;">EMPRESA S.A.S.</h3>
+    <h1 style="margin-top: -7%; margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">Ha finalizado la Prueba de Anosmia</h1>
+</div>
+
+<div class="user-result">
+
+    <div class="row userresult">
+        <div class="resultcol-25">
+            <span>Nombre:</span>
+        </div>
+        <div class="resultcol-75">
+            <script>
+                var nombre="{{ usuario[1] }}";
+                document.write(nombre);
+                document.write('<br>');
+            </script>
+        </div>
+    </div>
+
+    <div class="row userresult">
+        <div class="resultcol-25">
+            <span>C.C.:</span>
+        </div>
+        <div class="resultcol-75">
+            <script>
+                var identificacion="{{ usuario[0] }}";
+                document.write(identificacion)
+                document.write('<br>');
+            </script>
+        </div>
+    </div>
+
+    <div class="row userresult">
+        <div class="resultcol-25">
+            <span>Temperatura Corporal:</span>
+        </div>
+        <div class="resultcol-75">
+            <script>
+                var temp="{{ usuario[2] }}";
+                document.write(temp);
+                document.write(' °C');
+                document.write('<br>');
+            </script>
+        </div>
+    </div>
+
+    <div class="row userresult">
+        <div class="resultcol-25">
+            <span>Fecha prueba:</span>
+        </div>
+        <div class="resultcol-75">
+            <script>
+                var fecha="{{ usuario[3] }}";
+                document.write(fecha);
+                document.write('<br>');
+            </script>
+        </div>
+    </div>
+
+</div>
+
+<form class="resultform">
+    <fieldset class="resultfieldset">
+        <legend class="resultlegend">El resultado fue:</legend>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </fieldset>
+
+    <a class="button-link" style="padding: 20px;" href="/">Reiniciar prueba</a>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset ="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="icon" type="image/jpg" href="https://i.ibb.co/gvV4h6s/favicon-tulogoaqui.jpg"/>
+        <title>P.Anosmia-EMPRESA</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: 'Lato', sans-serif;
+            }
+            .content {
+                max-width: 1000px;
+                height: 1100px;
+                margin: auto;
+                background-image: url('https://i.ibb.co/m6P33sf/background.jpg');
+                background-attachment: cover;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-radius: 10%;
+            }
+
+            h1 {
+                text-align: center;
+                letter-spacing: 0.1rem;
+                text-shadow: 2px 2px 3px whitesmoke;
+                font-size: 2rem;
+                margin-top: auto;
+                color: #3a3a3a;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            h3 {
+                text-align: center;
+                text-shadow: 2px 2px 3px #3a3a3a;
+                padding-bottom: 5%;
+                letter-spacing: 0.1rem;
+                font-size: 1.2rem;
+                color: whitesmoke;
+            }
+
+            h4 {
+                text-align: center;
+            }
+
+            .button-link {
+                color: midnightblue;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                text-shadow: none;
+                padding: 25px;
+                border-radius: 15px;
+                -moz-border-radius: 15px;
+                -webkit-border-radius: 15px;
+                border: 2px solid midnightblue;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+                background-image: linear-gradient(to left, #2eb1d2, #b5e3f0);
+            }
+
+            .userquestion {
+                text-align:center;
+                font-weight: bold;
+                padding-top: 4%;
+            }
+
+/* todos los botones de si y no */
+            button {
+                /* border: 1px solid midnightblue; */
+                border: none;
+                border-radius: 2em;
+                font-weight: bold;
+                padding: 5px 40px;
+                cursor: pointer;
+                background-image: linear-gradient(to left, #2eb1d2, #b5e3f0);
+                box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+                min-width: 15%;
+                height: 50px;
+                font-size: 100%;
+                margin: 0 30px;
+            }
+
+/* los dos botones de confirmacion */
+            .btn {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 2%;
+                /* flex-direction: column;
+                align-items: center; */
+            }
+
+/* revisar con los radio de las pruebas */
+            input[type="radio"] {
+                cursor: pointer;
+                transform: scale(1.5);
+                    -ms-transform: scale(1.5); /* IE 9 */
+                    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+                    -moz-transform: scale(1.5); /* Mozilla */
+            }
+
+/* 1 logo de 768px hasta 1000px DISPOSITIVO */
+            @media only screen and (min-device-width: 768px) {
+                #logo-empresa {
+                    padding-top: 50px;
+                    display: block;
+                    width: 15%;
+                    margin-left: 7%;
+                }
+                .first-h1 {
+                    margin-top: -100px;
+                }
+            }
+
+/* 2 logo de 0 a 768px */
+            @media only screen and (max-width: 768px) {
+                #logo-empresa {
+                    width: 20%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 20px;
+                }
+                .first-h1 {
+                    margin-top: 30px;
+                }
+            }
+
+/*userfieldset*/
+            .userfieldset {
+                font-size: 120%;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 2em;
+            }
+            .userlegend {
+                font-size: 110%;
+                background-color: white;
+                color: black;
+                border-radius: 2em;
+                font-weight: bold;
+                padding: 1.5% 40px;
+            }
+            form .col-25 {
+                float: left;
+                width: 25%;
+                margin-top: 10px;
+            }
+            form .col-75 {
+                float: left;
+                width: 75%;
+                margin-top: 10px;
+            }
+            .row:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            input[type=text], input[type=date], input[type=number] {
+                border-radius: 2em;
+                padding: 10px;
+                border: 3px solid #ccc;
+                resize: vertical;
+                box-sizing: border-box;
+            }
+            input[type=text] {
+                width: 95%;
+            }
+            input[type=date]{
+                width: 40%;
+            }
+            input[type=number] {
+                width: 15%;
+            }
+            .dosradiosjuntos {
+                padding: 10px 20px 10px 5px;
+            }
+
+/* userform */
+/* 1 userform de 0 a 600px */
+            @media only screen and (max-width: 600px) {
+                .userform {
+                    width: 98%;
+                    margin: auto;
+                    padding: 0;
+                }
+                form .col-25, form .col-75 {
+                    width: 100%;
+                    margin-top: -1%;
+                    padding: 0;
+                }
+                label {
+                    padding: 8px;
+                    display: inline-block;
+                }
+            }
+
+/* 2 userform de 600 a 768px */
+            @media only screen and (min-width: 600px) {
+                .userform {
+                    width: 95%;
+                    margin: auto;
+                    padding: 0;
+                }
+                label {
+                    padding: 10px;
+                    display: inline-block;
+                }
+            }
+
+/* 3 userform de 768 a 1000px */
+            @media only screen and (min-width: 768px) {
+                .userform {
+                    display:block;
+                    width:85%;
+                    margin: auto;
+                    padding: 0;
+                }
+                label {
+                    padding: 10px 20px;
+                    display: inline-block;
+                }
+            }
+
+/* testform / testfieldset */
+            .testform {
+                display:block;
+                text-align: center;
+            }
+            .testfieldset {
+                font-size: 120%;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 2em;
+            }
+            .testlegend {
+                font-size: 110%;
+                background-color: white;
+                color: black;
+                border-radius: 2em;
+                font-weight: bold;
+                padding: 1.5% 40px;
+                margin-bottom: 0%;
+            }
+
+/* testform */
+/* 1 testform de 0 a 600px */
+            @media only screen and (max-width: 600px) {
+                .testform {
+                    width: 98%;
+                    margin: auto;
+                }
+                .testimg {
+                    width: 90%;
+                    border-radius: 1em;
+                    border: 3px solid #2eb1d2;
+                }
+                h1 {
+                    margin-top: -2%;
+                    margin-bottom: 2%;
+                    padding-top: 3%;
+                }
+                .testlabel {
+                    padding: 7px 5px;
+                    display: inline-block;
+                }
+            }
+
+/* 2 testform de 600 a 768px */
+            @media only screen and (min-width: 600px) {
+                .testform {
+                    width:95%;
+                    margin: auto;
+                }
+                .testimg {
+                    width: 85%;
+                    border-radius: 1em;
+                    border: 3px solid #2eb1d2;
+                }
+                h1 {
+                    margin-top: -2%;
+                    margin-bottom: 2%;
+                    padding-top: 3%;
+                }
+                .testlabel {
+                    padding: 7px 5px;
+                    display: inline-block;
+                }
+            }
+
+/* 3 testform de 768 a 1000px */
+            @media only screen and (min-width: 768px) {
+                .testform {
+                    width:75%;
+                    margin: auto;
+                }
+                .testimg {
+                    width: 80%;
+                    border-radius: 1em;
+                    border: 3px solid #2eb1d2;
+                }
+                h1 {
+                    margin-top: -2%;
+                    margin-bottom: 2%;
+                    padding-top: 3%;
+                }
+                .testlabel {
+                    padding: 5px 5px;
+                    display: inline-block;
+                }
+            }
+
+/* resultado */
+/* userresult */
+            div .user-result {
+                margin: auto;
+            }
+            div .userresult {
+                margin-top: 3%;
+            }
+            .userresult span {
+                font-size: 110%;
+                color: rgb(30, 30, 30);
+            }
+            .userresult .resultcol-25 {
+                text-decoration: underline;
+                float: left;
+            }
+            .userresult .resultcol-75 {
+                float: right;
+                font-size: 120%;
+                font-weight: bold;
+            }
+
+/* resultform */
+            .resultlegend {
+                font-size: 120%;
+                font-weight: bold;
+                background-color: white;
+                color: black;
+                border-radius: 2em;
+                padding: 1.5% 40px;
+                margin-bottom: 0%;
+            }
+            .resultfieldset {
+                margin: auto;
+                margin-bottom: 25%;
+                border: none;
+                border-radius: 20px;
+                margin-bottom: 20%;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .resultfieldset p {
+                font-size: 200%;
+                text-align: center;
+                font-weight: bold;
+                text-shadow: 2px 2px 2px #3a3a3a;
+                white-space: wrap;
+                color: #3fb8d5;
+            }
+
+            .resultform {
+                display:block;
+            }
+            .resultform a {
+                font-size: 120%;
+            }
+
+/* resultform responsive */
+/* 1 resultform de 425 a 600px */
+            @media only screen and (max-width: 600px) {
+                div .user-result {
+                    width: 85%;
+                    margin-top: 10%;
+                    margin-bottom: 10%;
+                }
+                .resultfieldset {
+                    width: 90%;
+                }
+                .resultform a {
+                    margin-left: 5%;
+                }
+            }
+
+/* 2 resultform de 0 a 425px */
+            @media only screen and (max-width: 425px) {
+                div .user-result {
+                    width: 90%;
+                    margin-top: 7%;
+                    margin-bottom: 7%;
+                }
+                .userresult .resultcol-25 {
+                    font-size: 120%;
+                    padding-bottom: 3%;
+                }
+                .resultfieldset {
+                    width: 95%;
+                }
+                .resultform a {
+                    margin-left: 2.5%;
+                }
+                .resultfieldset p {
+                    font-size: 180%;
+                }
+            }
+
+/* 3 resultform de 600 a 768px */
+            @media only screen and (min-width: 600px) {
+                div .user-result {
+                    width: 70%;
+                    margin-top: 8%;
+                    margin-bottom: 5%;
+                }
+                .resultfieldset {
+                    width: 85%;
+                }
+                .resultform a {
+                    margin-left: 7.5%;
+                }
+            }
+
+/* 4 resultform de 768 a 1000px */
+            @media only screen and (min-width: 768px) {
+                div .user-result {
+                    width: 60%;
+                    margin-bottom: 5%;
+                }
+                .resultfieldset {
+                    width: 80%;
+                }
+                .resultform a {
+                    margin-left: 10%;
+                }
+                .resultfieldset p {
+                    font-size: 250%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+
+        <h4>Desarrollado por <a href="mailto:migutie@icloud.com" target="_blank">Miguel Gutiérrez</a></h4>
+
+    </body>
+</html>

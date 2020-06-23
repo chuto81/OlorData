@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="logo">
+    <img id="logo-empresa" src="https://i.ibb.co/VvktPyg/tulogoaqui.jpg" alt="logo">
+</div>
+<div class="first-h1">
+    <h1>Prueba de Anosmia</h1>
+    <h3>EMPRESA S.A.S.</h3>
+</div>
+
+<form action="/add" method="post" class="userform" >
+    <fieldset class="userfieldset">
+        <legend class="userlegend">Identificación del Usuario</legend>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="currentdate">Fecha:</label>
+            </div>
+            <div class="col-75">
+                <input type="date" id="currentdate" name="currentdate" style="text-align:center" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="identification">No. Cédula:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="identification" name="identification" style="text-align:center;width:40%;" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="name">Nombre:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="gender">Género:</label>
+            </div>
+            <div class="col-75">
+                <input type="radio" id="male" name="gender" value="Masculino" required>
+                <label class="dosradiosjuntos" for="male">Masculino</label>
+                <input type="radio" id="female" name="gender" value="Femenino" required>
+                <label class="dosradiosjuntos" for="female">Femenino</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="age">Edad:</label>
+            </div>
+            <div class="col-75">
+                <input type="number" id="age" name="age" min="0" max="105" style="text-align:center;" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="company">Temperatura:</label>
+            </div>
+            <div class="col-75">
+                <input style="width: 25%;" type="number" id="company" name="company" step="0.1" min="33" max="43" placeholder="Temp. en °C" required>
+            </div>
+        </div>
+
+        <p class="userquestion">¿La identificación del usuario es correcta?
+        <div class="btn">
+            <button type="submit">Si</button>
+            <button type="reset">No</button>
+        </div>
+
+    </fieldset>
+</form>
+
+{% endblock %}

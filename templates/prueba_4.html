@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<h1>Prueba Cuatro</h1>
+
+<form action="/prueba4" method="post" class="testform">
+    <fieldset class="testfieldset">
+        <legend class="testlegend">¿Cúal es el olor que percibe en el papel?</legend>
+
+        <table>
+            <tr>
+                <td>
+                    <label for="prueba_41" class="testlabel">
+                        <img class="testimg" src="https://i.ibb.co/hLwpYwb/01alcohol1.jpg" alt="Alcohol"><br/>
+                        <input type="radio" id="prueba_41" name="prueba_4" value="0" required>
+                        <strong>Alcohol</strong>
+                    </label>
+                </td>
+                <td>
+                    <label for="prueba_42" class="testlabel">
+                        <img class="testimg" src="https://i.ibb.co/MP6Ghnh/04sinolor1.jpg" alt="Sin_Olor"><br/>
+                        <input type="radio" id="prueba_42" name="prueba_4" value="1" required>
+                        <strong>No tiene olor</strong>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="prueba_43" class="testlabel">
+                        <img class="testimg" src="https://i.ibb.co/wMmWh2N/02vinagre1.jpg" alt="Vinagre"><br/>
+                        <input type="radio" id="prueba_43" name="prueba_4" value="1" required>
+                        <strong>Vinagre</strong>
+                    </label>
+                </td>
+                <td>
+                    <label for="prueba_44" class="testlabel">
+                        <img class="testimg" src="https://i.ibb.co/Rh611pp/03varsol2.jpg" alt="Varsol"><br/>
+                        <input type="radio" id="prueba_44" name="prueba_4" value="1" required>
+                        <strong>Varsol</strong>
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+        <input type="hidden" id="identification" name="identification" value="{{ contact[0] }}">
+        <input type="hidden" id="name" name="name" value="{{ contact[1] }}">
+        <input type="hidden" id="gender" name="gender" value="{{ contact[2] }}">
+        <input type="hidden" id="age" name="age" value="{{ contact[3] }}">
+        <input type="hidden" id="company" name="company" value="{{ contact[4] }}">
+        <input type="hidden" id="currentdate" name="currentdate" value="{{ contact[5] }}">
+        <input type="hidden" id="test1" name="test1" value="{{ contact[6] }}">
+        <input type="hidden" id="test2" name="test2" value="{{ contact[7] }}">
+        <input type="hidden" id="test3" name="test3" value="{{ contact[8] }}">
+
+        <p class="userquestion" style="padding-top: 0%;">¿Está seguro de su respuesta?
+            <div class="btn">
+                <button type="submit">Si</button>
+                <button type="reset">No</button>
+            </div>
+
+    </fieldset>
+</form>
+
+{% endblock %}
