@@ -100,8 +100,6 @@ def prueba4():
         test4 = request.form.get('prueba_4')
         time = ahora
 
-        usuario = (identification, name, company, currentdate)
-
         client = ndb.Client()
         with client.context():
             contact = Contact(identification=identification,
@@ -116,6 +114,8 @@ def prueba4():
                               test4=test4,
                               time=time)
             contact.put()
+
+        usuario = (identification, name, company, currentdate)
 
         p4 = int(test4)
         p3 = int(test3)
