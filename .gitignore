@@ -1,0 +1,9 @@
+.gcloudignore
+.vscode/
+UI Design/
+__pycache__/
+css codes/
+empresa.json
+equivida.json
+lib/
+venv/
