@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h1>Prueba Uno</h1>
+<h1 style="padding-top: 2%;">Prueba Uno</h1>
 
 <form action="/prueba1" method="post" class="testform">
     <fieldset class="testfieldset">
@@ -50,7 +50,7 @@
         <input type="hidden" id="company" name="company" value="{{ contact[4] }}">
         <input type="hidden" id="currentdate" name="currentdate" value="{{ contact[5] }}">
 
-        <p class="userquestion" style="padding-top: 0%;">¿Está seguro de su respuesta?
+        <p class="userquestion" style="margin-top: -3%;">¿Está seguro de su respuesta?
             <div class="btn">
                 <button type="submit">Si</button>
                 <button type="reset">No</button>
@@ -58,5 +58,7 @@
 
     </fieldset>
 </form>
+<br>
+<br>
 
 {% endblock %}
