@@ -1,3 +1,3 @@
-# prah_co
+# Anosmia and Hyposmia Web App test for COVID-19 diagnosis
 
-Este es #OlorData
+This is #OlorData
